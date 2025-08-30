@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angry Pomodoro — Support</title>
+  <style>
+    :root{--bg:#0f0f12;--fg:#f5f5f7;--muted:#9aa0a6;--accent:#ff3b30;--card:#15151a}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Helvetica,Arial,sans-serif}
+    .wrap{max-width:840px;margin:40px auto;padding:0 20px}
+    .card{background:var(--card);border-radius:16px;padding:24px}
+    h1{font-size:34px;margin:0 0 8px}
+    h2{font-size:22px;margin:24px 0 8px}
+    a{color:var(--fg)}
+    .cta{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    ul{padding-left:18px}
+    footer{margin-top:24px;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Angry Pomodoro</h1>
+      <p>Harsh but hilarious focus timer. Put your phone face-down during work. Pick it up and it will scream, flash, and tomato-strobe you back to discipline.</p>
+      <h2>Support</h2>
+      <p>Email: <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a></p>
+      <a class="cta" href="./privacy.html">Privacy Policy</a>
+    </div>
+    <footer>© <span id="y"></span> Angry Pomodoro</footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
