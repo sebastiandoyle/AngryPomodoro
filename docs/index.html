@@ -3,30 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angry Pomodoro — Support</title>
+  <title>pomoscreamo — The strict face-down Pomodoro</title>
+  <meta name="description" content="Put your phone face-down. Pick it up and pomoscreamo screams, flashes, and tomato-strobes you back to focus." />
   <style>
-    :root{--bg:#0f0f12;--fg:#f5f5f7;--muted:#9aa0a6;--accent:#ff3b30;--card:#15151a}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Helvetica,Arial,sans-serif}
-    .wrap{max-width:840px;margin:40px auto;padding:0 20px}
-    .card{background:var(--card);border-radius:16px;padding:24px}
-    h1{font-size:34px;margin:0 0 8px}
-    h2{font-size:22px;margin:24px 0 8px}
-    a{color:var(--fg)}
-    .cta{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    ul{padding-left:18px}
-    footer{margin-top:24px;color:var(--muted);font-size:14px}
+    :root{
+      --bg:#0b0c10; --fg:#f5f7fb; --muted:#aeb3bd; --accent:#ff3b30; --card:#12141a; --glow:#ff6b60;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0c10 0%, #141821 60%, #0b0c10 100%);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Helvetica,Arial,sans-serif}
+    a{color:var(--fg);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:32px 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{font-weight:900;letter-spacing:.2px}
+    .chip{background:rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .hero h1{font-size:44px;line-height:1.05;margin:0 0 8px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 16px;border-radius:12px;font-weight:700;box-shadow:0 10px 30px rgba(255,59,48,.35)}
+    .ghost{background:rgba(255,255,255,.1);box-shadow:none;margin-left:10px}
+    .phone{
+      aspect-ratio:9/19;border-radius:28px;background:linear-gradient(180deg,#1c1f27,#0f1116);border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 30px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.04) inset; position:relative; overflow:hidden
+    }
+    .phone:before{content:"";position:absolute;inset:0;backdrop-filter:blur(6px)}
+    .phone .tomato{position:absolute;inset:0;display:grid;place-items:center;opacity:.08}
+    .features{margin:48px 0;display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}
+    .card h3{margin:4px 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .footer{display:flex;justify-content:space-between;align-items:center;margin:36px 0;color:var(--muted);font-size:14px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.phone{height:420px}}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
-      <h1>Angry Pomodoro</h1>
-      <p>Harsh but hilarious focus timer. Put your phone face-down during work. Pick it up and it will scream, flash, and tomato-strobe you back to discipline.</p>
-      <h2>Support</h2>
-      <p>Email: <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a></p>
-      <a class="cta" href="./privacy.html">Privacy Policy</a>
+    <div class="nav">
+      <div class="brand">pomoscreamo</div>
+      <div class="chip">Strict pomodoro • No accounts • Offline</div>
     </div>
-    <footer>© <span id="y"></span> Angry Pomodoro</footer>
+
+    <section class="hero">
+      <div>
+        <h1>Face-down focus. Pick it up and it screams.</h1>
+        <p>Start a session, put your phone face-down, and get to work. If you cheat, pomoscreamo blasts a scream, flashes the torch, and tomato-strobes your retinas back to discipline.</p>
+        <p>
+          <a class="cta" href="#how">How it works</a>
+          <a class="cta ghost" href="./privacy.html">Privacy</a>
+        </p>
+        <p style="margin-top:10px;color:var(--muted)">Support: <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a></p>
+      </div>
+      <div class="phone">
+        <div class="tomato">🍅🍅🍅</div>
+      </div>
+    </section>
+
+    <section id="how" class="features">
+      <div class="card">
+        <h3>1) Press Start</h3>
+        <p>Choose your work/break lengths. No sign-in, no fluff.</p>
+      </div>
+      <div class="card">
+        <h3>2) Place face-down</h3>
+        <p>It “arms” only after you put the phone down, so starting is effortless.</p>
+      </div>
+      <div class="card">
+        <h3>3) Get roasted if you cheat</h3>
+        <p>Scream at max volume + torch flash + strobing tomatoes. Put it back down to silence instantly.</p>
+      </div>
+    </section>
+
+    <div class="footer">
+      <span>© <span id="y"></span> pomoscreamo</span>
+      <span><a href="./privacy.html">Privacy Policy</a></span>
+    </div>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
