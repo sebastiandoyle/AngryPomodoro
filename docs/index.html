@@ -25,8 +25,7 @@
       aspect-ratio:9/19;border-radius:28px;background:linear-gradient(180deg,#1c1f27,#0f1116);border:1px solid rgba(255,255,255,.06);
       box-shadow:0 30px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.04) inset; position:relative; overflow:hidden
     }
-    .phone:before{content:"";position:absolute;inset:0;backdrop-filter:blur(6px)}
-    .phone .tomato{position:absolute;inset:0;display:grid;place-items:center;opacity:.08}
+    .phone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .features{margin:48px 0;display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
     .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}
     .card h3{margin:4px 0 6px;font-size:18px}
@@ -53,7 +52,7 @@
         <p style="margin-top:10px;color:var(--muted)">Support: <a href="mailto:sebastian.doyle@outlook.com">sebastian.doyle@outlook.com</a></p>
       </div>
       <div class="phone">
-        <div class="tomato">🍅🍅🍅</div>
+        <img src="./assets/screen.png" alt="pomoscreamo screenshot" />
       </div>
     </section>
 
